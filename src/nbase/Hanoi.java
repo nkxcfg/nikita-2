@@ -2,7 +2,7 @@ package nbase;
 import java.util.*;
 public class Hanoi {
 	private void meshalka(int n,String a, String b, String c) {
-		String text = "Disk " + n + " moved from " + a + " to " + c;       
+		String text = "Disk  " + n + " moved from " + a + " to " + c;       
 		if (n == 1) {
 			System.out.println(text);
 		}
