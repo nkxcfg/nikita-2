@@ -14,33 +14,36 @@ public class BinarySearchInArray {
 	    showout(array); // for debugging 
 	    System.out.print("Value to search: ");
 	    int searchValue = in.nextInt();
-	    binSearch(array, searchValue);
-		}
-	private static void binSearch (int[] array, int searchValue){
-		int maxN=array.length-1;
-		int midN=array.length/2;
-		int check = 0;
-		while (check == 0){
-			if(searchValue == array[midN]){
-				System.out.print("true: found in " + (midN+1)+ " position");
-				check = 1;
-			}
-			else if(searchValue < array[midN]){
-				maxN=midN;
-				midN=midN/2;
-			}
-			else if(searchValue > array[midN]){
-				midN=maxN-midN/2;
-				
-			}	
-			
-		}
-		if(searchValue != array[midN]){
-			System.out.print("false");
-		}
+	    
+	    binSearch( array, searchValue);
 	}
-
-	// for debugging 
+	private static void binSearch ( int[] array, int searchValue){
+		int maxN=array.length-1;
+		int minN=0;
+		int avgN=maxN/2;
+		boolean check = false;
+		while ((array[avgN]!= searchValue)&&(maxN-minN>1)){
+			if (searchValue > array[avgN]){
+				minN = avgN+1;
+				avgN=((minN+maxN)/2);
+			}
+			else {
+				maxN=avgN-1;
+				avgN=((minN+maxN)/2);
+			}
+		}
+		if (maxN-minN<1){
+			System.out.print(check);
+		}
+		else if (searchValue>array[array.length-1]){
+			System.out.print(check);
+		}
+		else{
+			check = true;
+			System.out.print(check + " : found in " + (avgN+1)+ " position");
+		}
+		
+	}
 	private static void showout(int[] array){ 
 		for (int index = 0; index < array.length - 1; ++index){
 			System.out.print(array[index] + ", ");
