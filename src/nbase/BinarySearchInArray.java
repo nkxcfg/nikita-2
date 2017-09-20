@@ -8,41 +8,36 @@ public class BinarySearchInArray {
 		int[] array = new int[size];
 	    for (int n = 0; n < array.length; n++){
 	    	array[n] = (int) Math.round((Math.random() * 99));
-	   		}
+	   	}
 	    sort(array);	
-	    System.out.print("array debug: "); // for debugging 
-	    showout(array); // for debugging 
+	    System.out.print("array: "); 
+	    showout(array); 
 	    System.out.print("Value to search: ");
 	    int searchValue = in.nextInt();
-	    
 	    binSearch( array, searchValue);
-	}
-	private static void binSearch ( int[] array, int searchValue){
+    }
+	public static int binSearch (int[] array, int searchValue){
 		int maxN=array.length-1;
 		int minN=0;
-		int avgN=maxN/2;
-		boolean check = false;
-		while ((array[avgN]!= searchValue)&&(maxN-minN>1)){
-			if (searchValue > array[avgN]){
+		int avgN=-1;
+		while (minN <= maxN){
+			avgN=(minN+maxN)/2;
+	    	int avgValue=array[avgN];
+			if (avgValue < searchValue){
 				minN = avgN+1;
-				avgN=((minN+maxN)/2);
 			}
-			else {
-				maxN=avgN-1;
-				avgN=((minN+maxN)/2);
+			else if(avgValue > searchValue){
+				maxN = avgN-1;
+			}
+			else{
+				System.out.print("found in " + (avgN+1)+ " position ");
+				break;
 			}
 		}
-		if (maxN-minN<1){
-			System.out.print(check);
+		if (minN > maxN){
+			System.out.print("false");
 		}
-		else if (searchValue>array[array.length-1]){
-			System.out.print(check);
-		}
-		else{
-			check = true;
-			System.out.print(check + " : found in " + (avgN+1)+ " position");
-		}
-		
+		return avgN;
 	}
 	private static void showout(int[] array){ 
 		for (int index = 0; index < array.length - 1; ++index){
@@ -63,8 +58,8 @@ public class BinarySearchInArray {
 			if (array[index] > array[index + 1]){
 				isSorted = false;
 		        swap(array, index, index + 1);
-		    	}
-			}
+		    }
+		}
 		return isSorted;
 		}
 	private static void swap(int[] array, int currentIndex, int nexttIndex){
