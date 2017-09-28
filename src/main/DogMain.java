@@ -3,72 +3,62 @@ package main;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DogStart {
+public class DogMain {
 	Scanner s;
 	Dog[] dogs;
 	int dogCount;
 	DogTable table;
-	
-	//methods ----------------------------------
 	public static void main (String[] args){
-		DogStart dogs = new DogStart();
+		DogMain dogs = new DogMain();
 		dogs.dogsDataInputAndSorterSelect();
 	}
 	private void dogsDataInputAndSorterSelect(){
-		//input and generate dog table
 		this.s = new Scanner(System.in);
-		this.generateDogs();
-		
+		this.inputDogs();
 		this.table = new DogTable(this.dogs, 0);
 		this.table.printTable();
-		
-		//main loop:
 		boolean looped = true;
-		int sortInd;
-		
+		int sortChoice;
 		while (looped){
-			sortInd = this.sortTableInd();
-			if (sortInd == 7) break;
+			sortChoice = this.sortTableByChoice();
+			if (sortChoice == 7) break;
      		DogTable.cls();
-			
-			switch (sortInd){
+			switch (sortChoice){
 			case 1:
 				System.out.println("Sorted by Name ASC");
 				Arrays.sort(dogs, new SortByNameAsc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			case 2:
 				System.out.println("Sorted by Name DESC");
 				Arrays.sort(dogs, new SortByNameDesc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			case 3:
 				System.out.println("Sorted by Size ASC");
 				Arrays.sort(dogs, new SortBySizeAsc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			case 4:
 				System.out.println("Sorted by Size DESC");
 				Arrays.sort(dogs, new SortBySizeDesc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			case 5:
 				System.out.println("Sorted by Age ASC");
 				Arrays.sort(dogs, new SortByAgeAsc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			case 6:
 				System.out.println("Sorted by Age DESC");
 				Arrays.sort(dogs, new SortByAgeDesc());
-				table.setInd(sortInd);
+				table.setChoice(sortChoice);
 				break;
 			}
-			
 			table.printTable();
 		}
 	}
-	
-	private void generateDogs(){
+	private void inputDogs(){
 		
 		System.out.println("Input your data. 1st arg is count of dogs. 2nd and the nexts are dog names.");
 		boolean isPutted = false;
@@ -112,8 +102,7 @@ public class DogStart {
 		}
 	}
 	
-	private int sortTableInd(){
-		
+	private int sortTableByChoice(){
 		boolean isPutted = false;
 		int choice = 0;
 		System.out.println("Input the following to sort:\n 1 - by name asc,\n 2 - by name desc,\n 3 - by size asc,\n 4 - by size desc,\n 5 - by age asc,\n 6 - by age desc,\n 7 - for exit.");

@@ -1,7 +1,10 @@
 package main;
 
+/** DogTable - table with info about dog for displaying after dog info input and after sorting 
+ * @author nikita.kazakov
+ *
+ */
 public class DogTable {
-	
 	private Dog[] table;
 	private int nameLength;
 	private int sortedBy;
@@ -19,8 +22,8 @@ public class DogTable {
 			this.nameLength = (this.table[i].getName().length() > this.nameLength) ? this.table[i].getName().length(): this.nameLength;
 		}
 	}
-	public void setInd(int ind){
-		this.sortedBy = ind;
+	public void setChoice(int choice){
+		this.sortedBy = choice;
 	}
 	public void printTable(){
 	//Header

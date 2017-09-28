@@ -2,6 +2,10 @@ package main;
 
 import java.util.Comparator;
 
+/**Sorting dogs by name ascending .
+ * @author nikita.kazakov
+ *
+ */
 public class SortByNameAsc implements Comparator<Dog>{
 
 	@Override

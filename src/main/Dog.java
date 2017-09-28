@@ -2,6 +2,10 @@ package main;
 
 import java.util.Random;
 
+/**
+ * @author nikita.kazakov.
+ *
+ */
 public class Dog {
 	private String dogName;
 	private int dogSize;
@@ -33,6 +37,9 @@ public class Dog {
 		}
 	}
 	
+	/** int size to String size for table and sorting.
+	 * @return result String size.
+	 */
 	public String getSize(){ // Interprets int size as String
 		String result;
 		switch (this.dogSize){
@@ -46,32 +53,40 @@ public class Dog {
 		return result;
 	}
 	
+	/** For convert names to one format.
+	 * @param name
+	 */
 	public void setName(String name){
-		// changes format if input is not correct. Same methods should be generated in case if user needs to change age or size
 		this.dogName = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 	}
 	
+	/**For table and sorting.
+	 * @return dogAge to String.
+	 */
 	public String getAge(){
 		Integer temp = new Integer(this.dogAge);
 		return temp.toString();
 	}
 	
+	/**For table and sorting.
+	 * @return 
+	 */
 	public String getName(){
 		return this.dogName;
 	}
 	
+	/**For table and sorting.
+	 * @return
+	 */
 	public int getAgeInt(){
 		return this.dogAge;
 	}
 	
+	/**For table and sorting.
+	 * @return
+	 */
 	public int getSizeInt(){
 		return this.dogSize;
 	}
-	
-	//@Override
-	//public String toString(){ // toString override ----------------------------------------------------------------
-		//return "Dog name is "+ this.dogName + " it's " + this.getSize() + " sized and " + this.dogAge + " years old.";
-	//}
-	//-----------------------------------------------------------------------------------------------------
 		
 }

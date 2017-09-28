@@ -2,6 +2,10 @@ package main;
 
 import java.util.Comparator;
 
+/** Sorting dogs by age ascending.
+ * @author nikita.kazakov
+ *
+ */
 public class SortByAgeAsc implements Comparator<Dog>{
 
 	@Override
