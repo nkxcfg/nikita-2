@@ -86,7 +86,7 @@ public class DogTable {
 		}
 	}
 	}
-	/** input 20 empty row for separate displaying of sorted table
+	/** input 20 empty row for separate displaying of sorted table.
 	 * 
 	 */
 	public static void cls(){

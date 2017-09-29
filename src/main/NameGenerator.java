@@ -1,6 +1,6 @@
 package main;
 
-/** Used in Dog.java for generate name.
+/** Used in Dog.java for generate name. 
  * @author nikita.kazakov.
  *
  */

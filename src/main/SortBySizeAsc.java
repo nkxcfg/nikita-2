@@ -2,7 +2,7 @@ package main;
 
 import java.util.Comparator;
 
-/**Sorting dogs by size ascending .
+/**Sorting dogs by size ascending . 
  * @author nikita.kazakov
  *
  */

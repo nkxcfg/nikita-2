@@ -2,7 +2,7 @@ package main;
 
 import java.util.Comparator;
 
-/** Sorting dogs by age  descending  .
+/** Sorting dogs by age  descending   .
  * @author nikita.kazakov
  *
  */

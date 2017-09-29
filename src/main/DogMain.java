@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /** Main class.
- * @author nikita.kazakov
+ * @author nikita.kazakov .
  *
  */
 public class DogMain {

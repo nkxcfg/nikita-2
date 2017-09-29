@@ -2,7 +2,7 @@ package main;
 
 import java.util.Comparator;
 
-/**Sorting dogs by name descending.
+/**Sorting dogs by name descending. 
  * @author nikita.kazakov
  *
  */

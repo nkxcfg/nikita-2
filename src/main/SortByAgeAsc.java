@@ -1,8 +1,8 @@
 package main;
 
 import java.util.Comparator;
-
-/** Sorting dogs by age ascending.
+ 
+/** Sorting dogs by age ascending .
  * @author nikita.kazakov
  *
  */

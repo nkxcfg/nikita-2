@@ -3,7 +3,7 @@ package main;
 import java.util.Random;
 
 /**
- * @author nikita.kazakov.
+ * @author nikita.kazakov .
  *
  */
 public class Dog {
