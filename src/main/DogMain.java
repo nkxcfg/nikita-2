@@ -3,6 +3,10 @@ package main;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/** Main class.
+ * @author nikita.kazakov
+ *
+ */
 public class DogMain {
 	Scanner s;
 	Dog[] dogs;
@@ -58,6 +62,7 @@ public class DogMain {
 			table.printTable();
 		}
 	}
+	
 	private void inputDogs(){
 		
 		System.out.println("Input your data. 1st arg is count of dogs. 2nd and the nexts are dog names.");
@@ -69,9 +74,9 @@ public class DogMain {
 			String[] data = temp.trim().split(" ");
 			
 			if (temp.isEmpty()) {
-				System.out.println("Please input smth. Try again"); //verifies that inputed string is not empty
+				System.out.println("Please input smth. Try again"); 
 			} else {
-				try { // verifies that 1st arg is int
+				try { 
 					this.dogCount = Integer.parseInt(data[0]);
 					isInt = true;
 					} catch (NumberFormatException e) {
@@ -81,12 +86,10 @@ public class DogMain {
 					dogs = new Dog[this.dogCount];
 					isPutted = true;
 				}
-				//generates dog array
 				if (data.length > this.dogCount+1){
 					System.out.println("Please notice that you're put more names than dogs exist. Extra names will not be used.");
 				}
-				//this part is not obvious but it's the only way i can think about it. It's needed to verify the name format
-				//It creates dogs with generated names and overwrites they names to user specified
+				
 				
 				for (int i = 0; i<this.dogCount; i++){
 						dogs[i] = new Dog(null, 0, 0);
@@ -102,6 +105,9 @@ public class DogMain {
 		}
 	}
 	
+	/** Check inputed value for select sorting method. 
+	 * @return choice - checked value provided bu user.
+	 */
 	private int sortTableByChoice(){
 		boolean isPutted = false;
 		int choice = 0;

@@ -82,10 +82,13 @@ public class DogTable {
 			System.out.print(ga); // Age
 			for(int j = 0; j < 5 - table[i].getAge().length(); j++){
 				System.out.print(" ");
-			}
 			System.out.println("|");
 		}
 	}
+	}
+	/** input 20 empty row for separate displaying of sorted table
+	 * 
+	 */
 	public static void cls(){
 	    for (int i = 0; i < 20; ++i){
 	     System.out.println();
