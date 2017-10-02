@@ -45,7 +45,7 @@ public class Rectangle {
      * @return perimeter.
      */
     public double perimeter() {
-        double perimeter = 2 * Math.sqrt(3)* height;
+        double perimeter = 2 * height + 2 * width;
         return perimeter;
     }
 

@@ -35,7 +35,7 @@ public class TestCircle {
         Rectangle uno = test3.boundingBox (test3);
         assertEquals(2, uno.getX(),delta);
         assertEquals(4, uno.getY(),delta);
-        assertEquals(10, uno.getWidth(),delta);
-        assertEquals(10, uno.getHeight(),delta);
+        assertEquals(7, uno.getWidth(),delta);
+        assertEquals(7, uno.getHeight(),delta);
     }
 }

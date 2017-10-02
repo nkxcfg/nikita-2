@@ -48,7 +48,7 @@ public class Circle extends Rectangle {
      * @return a Rectangle.
      */
     public Rectangle boundingBox(Circle obj){
-        Rectangle a = new Rectangle (getX(),getY(),radius*2,radius*2);
+        Rectangle a = new Rectangle (getX(),getY(),radius/(Math.sqrt(2)/2),radius/(Math.sqrt(2)/2));
         return a;
     }
 }
