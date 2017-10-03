@@ -8,7 +8,7 @@ public class TestRectangle {
     Rectangle test1 = new Rectangle (3,6,8,9);
     @Test
     public void perimeter() {
-        assertEquals(78, test1.perimeter(),delta);
+        assertEquals(34, test1.perimeter(),delta);
     }
     @Test
     public void isInside () {

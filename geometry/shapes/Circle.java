@@ -16,7 +16,6 @@ public class Circle extends Rectangle {
     /**Constructor by default.
      */
     public Circle() {
-        super();
         this.radius = 0;
     }
 
@@ -48,7 +47,7 @@ public class Circle extends Rectangle {
      * @return a Rectangle.
      */
     public Rectangle boundingBox(Circle obj){
-        Rectangle a = new Rectangle (getX(),getY(),radius/(Math.sqrt(2)/2),radius/(Math.sqrt(2)/2));
+        Rectangle a = new Rectangle (getX(),getY(),radius/(Math.sqrt(2)/2));
         return a;
     }
 }

@@ -1,6 +1,7 @@
 package shapes;
 
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class TestCircle {
@@ -36,6 +37,7 @@ public class TestCircle {
         assertEquals(2, uno.getX(),delta);
         assertEquals(4, uno.getY(),delta);
         assertEquals(7, uno.getWidth(),delta);
-        assertEquals(7, uno.getHeight(),delta);
+        assertEquals(uno.getWidth(), uno.getHeight(),delta);
     }
+
 }

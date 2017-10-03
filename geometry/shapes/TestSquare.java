@@ -13,7 +13,7 @@ public class TestSquare {
     }
     @Test
     public void isInside () {
-        assertEquals(true, test2.isInside(5,3));
+        assertEquals(true, test2.isInside(5,5));
     }
     @Test
     public void isNotInside () {

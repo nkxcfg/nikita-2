@@ -19,6 +19,15 @@ public class Rectangle {
         this.height = height;
         this.width = width;
     }
+    /** Constructor for rectangle as square.
+     * 
+     */
+    public Rectangle(double x1, double y1, double height) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.height = height;
+        this.width = height;
+    }
 
     /**Constructor for coordinates only.
      *
