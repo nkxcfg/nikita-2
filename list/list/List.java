@@ -53,7 +53,7 @@ public class List<T>{
             	size--;
             	break;
             } 
-            
+     
             else {
             	iterator.next();
             }
