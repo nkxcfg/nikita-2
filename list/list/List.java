@@ -52,7 +52,8 @@ public class List<T>{
             	iterator.iterable = null;
             	size--;
             	break;
-            }
+            } 
+            
             else {
             	iterator.next();
             }
