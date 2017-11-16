@@ -1,12 +1,10 @@
 package list;
 
 import static org.junit.Assert.*;
-
-import java.util.NoSuchElementException;
-
 import org.junit.Before;
 import org.junit.Test;
-
+import java.util.NoSuchElementException;
+import list.List;
 public class TestList{
 	
 	List<String> testList;

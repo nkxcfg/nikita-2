@@ -43,7 +43,7 @@ public class List<T>{
     }
     public void remove (T element){
         ListIterator iterator = new ListIterator();     
-        int tempSize = this.size; //kostyl'. need to think how to change it to smth normal
+        int tempSize = this.size; 
         while (iterator.hasNext()){
             if (iterator.iterable.element.equals(element) == true){
             	iterator.iterable.prev.next = iterator.iterable.next;
